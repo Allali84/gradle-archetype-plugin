@@ -21,9 +21,9 @@ object ProjectGenerator {
             if (it != template) {
                 fileName = it.absolutePath
                 fileName = fileName.replace(template.absolutePath, targetDir.absolutePath)
+                fileName = fileName.replace("__projectName__", model.projectName.toLowerCase())
                 if (!fileName.contains("gradle/wrapper")) {
                     fileName = fileName.replace("__ProjectName__", model.projectName.capitalize())
-                    fileName = fileName.replace("__projectName__", model.projectName.toLowerCase())
                     fileName = fileName.replace("__packagePath__", model.packagePath.toLowerCase())
                 }
                 destFile = File(fileName)
