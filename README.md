@@ -7,8 +7,8 @@
 ### Interactive Mode:
 ```
 gradle cleanArch generate -i
+```
 
 ### Token Format
  * In code: `@variable@`
  * In file name: `__variable__`
- 
